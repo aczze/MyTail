@@ -5,23 +5,22 @@
 void MyStream(char* argv[])
 {
     char* Stream;
-    char* c;
+    int c;
     int Amount = 0;
     int LettersToPrint = atoi(argv[1]);
-    while(c != EOF)
+    while((c = getchar()) != EOF)
     {
-        c = getchar(stdin);
        Stream[Amount] = c;
        Amount++;
 
-        if(c == EOF)
+        if(c == '\n')
         {
             break;
         }
     }
-    Stream = (char*)malloc(Amount*sizeof(char));
+    Stream[Amount] = (char*)malloc(Amount*sizeof(char));
 
-    for(int i = Amount - LettrsToPrint; i <= Amount; i++)
+    for(int i = Amount - LettersToPrint; i <= Amount; i++)
     {
         printf("%c",Stream[i]);
     }
