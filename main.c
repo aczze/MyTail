@@ -24,11 +24,10 @@ void MyStream(char* argv[])
         }
     }
 
-    for(int i = Amount - LettersToPrint; i <= Amount; i++)
+    for(int i = 0; i <= LettersToPrint; i++)
     {
         printf("%c",Stream[i]);
     }
-
     free(Stream);
 }
 
