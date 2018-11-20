@@ -8,17 +8,21 @@ void MyStream(char* argv[])
     int c;
     int Amount = 0;
     int LettersToPrint = atoi(argv[1]);
+    Stream = (char*)malloc(Amount*sizeof(char));
     while((c = getchar()) != EOF)
     {
        Stream[Amount] = c;
        Amount++;
+       if(Amount == LetersToPrint)
+       {
+           Amount = 0;
+       }
 
         if(c == '\n')
         {
             break;
         }
     }
-    Stream[Amount] = (char*)malloc(Amount*sizeof(char));
 
     for(int i = Amount - LettersToPrint; i <= Amount; i++)
     {
