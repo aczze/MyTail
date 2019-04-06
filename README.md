@@ -1,2 +1,2 @@
 # MyTail
-Printing a la tail programm
+Printing a la tail program.
